@@ -1,0 +1,62 @@
+===== PROMPT 1: SQL Query Optimization =====
+
+Context: I am working with a large fact table (1B+ rows) in Snowflake.
+The following query is running very slowly (45+ seconds):
+  SELECT customer_id, SUM(amount) 
+  FROM sales 
+  WHERE sale_date > '2024-01-01' 
+  GROUP BY customer_id
+
+Role: Act as a senior data warehouse optimization expert.
+
+Task: Optimize this SQL query for performance.
+
+Constraints:
+- Focus on performance improvements only
+- Assume Snowflake distributed compute environment
+- Do not change the business logic
+
+Format: Return the optimized SQL query with comments explaining each change.
+
+
+===== PROMPT 2: Fix PySpark Memory Error =====
+
+Context: My PySpark ETL pipeline fails with OutOfMemoryError 
+when joining two DataFrames — one is 500GB, another is 2GB.
+Running on Databricks cluster with 32GB driver memory.
+
+Role: Act as a senior data engineer with PySpark expertise.
+
+Task: Suggest how to fix the memory issue in this join operation.
+
+Constraints:
+- Use only PySpark native solutions
+- No external libraries
+- Assume Databricks environment
+
+Format: Step-by-step solution with code snippets for each step.
+
+
+===== PROMPT 3: Data Quality Validation =====
+
+Context: I receive a daily CSV file with these columns:
+customer_id, name, email, purchase_amount, date
+
+Role: Act as a data quality engineer.
+
+Task: Write Python code to validate this dataset for quality issues.
+
+Constraints:
+- Check for: nulls, duplicates, invalid emails, negative amounts
+- Use pandas library only
+- Must work for files up to 1 million rows
+
+Format: A Python function with comments and a summary report.
+
+Example output:
+{
+  "null_count": {"email": 3, "name": 0},
+  "duplicate_rows": 5,
+  "invalid_emails": 2,
+  "negative_amounts": 1
+}

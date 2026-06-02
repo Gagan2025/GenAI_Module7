@@ -1,0 +1,4 @@
+customer_id,name,email,product,amount,date
+1,Alice,alice@email.com,Laptop,1200,2024-01-15
+2,Bob,bob@email.com,Phone,800,2024-01-16
+3,Carol,carol@email.com,Tablet,600,2024-01-17
