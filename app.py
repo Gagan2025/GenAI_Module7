@@ -208,3 +208,4 @@ if st.button("Generate SQL & Execute"):
 
 st.markdown("---")
 st.caption("Built with Streamlit + Gemini AI")
+st.title("App Running Successfully")

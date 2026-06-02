@@ -3,3 +3,6 @@ pandas
 pymupdf
 python-dotenv
 reportlab
+streamlit
+google-generativeai
+python-dotenv
