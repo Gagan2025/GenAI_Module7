@@ -9,7 +9,6 @@ jobs:
 deploy:
 runs-on: ubuntu-latest
 
-```
 steps:
   - name: Checkout code
     uses: actions/checkout@v3
@@ -30,4 +29,3 @@ steps:
       app-name: 'genai-gagan'
       publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
       startup-command: 'python -m streamlit run app.py --server.port 8000 --server.address 0.0.0.0'
-```
